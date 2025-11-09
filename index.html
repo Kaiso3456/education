@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    .btn {
+      background-color: #ffd54f;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .btn a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #ffca28;
+      transform: translateY(-2px);
+    }
+
+    /* အပေါ်(၃) အောက်(၂) layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 20px;
+      padding: 20px;
+      max-width: 900px; /* အပြည့် 900px သတ်မှတ် */
+      margin: 0 auto;
+    }
+
+    .box {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .box img {
+      width: 100%;         /* box ကို အပြည့်ဖြစ်အောင် */
+      height: 300px;       /* အမြင့်ချိန် */
+      object-fit: cover;   /* ပုံမသိမ်းဘဲ ပြည့်အောင် */
+      display: block;
+    }
+
+    .box p, .box a {
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .box a:hover {
+      color: #0077ff;
+    }
+
+    /* အောက်တန်း ၂ ကွက်သာရှိအောင် */
+    .box:nth-child(4) {
+      grid-column: 1 / 3;
+    }
+    .box:nth-child(5) {
+      grid-column: 3 / 4;
+    }
+
+    footer {
+      background-color: #4facfe;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .box:nth-child(4),
+      .box:nth-child(5) {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>"WELCOME TO MY PROJECT"</h1>
+    <nav>
+      <button class="btn"><a href="./Contant.html">Home</a></button>
+      <button class="btn"><a href="./reference.html">Reference</a></button>
+      <button class="btn"><a href="./AirPollutionAndPollutantsandConsequencesOfAirPollution.html">Letter</a></button>
+    </nav>
+  </header>
+
+  <div class="grid">
+    <div class="box">
+      <img src="./image/viber_image_2025-11-08_22-31-59-257.jpg" alt="Industry">
+      <p><a href="./product.html">Occures</a></p>
+    </div>
+
+    <div class="box">
+      <img src="./image/viber_image_2025-11-08_22-32-00-761.jpg" alt="Sources">
+      <p><a href="./sources.html">Sources of Air Pollution</a></p>
+    </div>
+
+    <div class="box">
+      <img src="./image/viber_image_2025-11-08_22-31-59-912.jpg" alt="Ozone">
+      <p><a href="./ozone.html">Ozone Depletion</a></p>
+    </div>
+
+    <div class="box">
+      <img src="./image/viber_image_2025-11-08_22-32-01-017.jpg" alt="Acid Rain">
+      <p><a href="./acidrain.html">Acid Rain</a></p>
+    </div>
+
+    <div class="box">
+      <img src="./image/viber_image_2025-11-08_22-32-00-311.jpg" alt="Climate Change">
+      <p><a href="./climate.html">Climate Change</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <marquee>"Basic Education High School, Chaung Yin"</marquee>
+  </footer>
+</body>
+</html>
